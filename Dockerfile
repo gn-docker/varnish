@@ -14,9 +14,6 @@ ENV VARNISH_MEM  100M
 EXPOSE 80
 VOLUME /etc/varnish
 
-RUN ln -sf /dev/stdout /var/log/varnish/access.log
-RUN ln -sf /dev/stderr /var/log/varnish/error.log
-
 COPY varnish /
 
 CMD ["/varnish"]
